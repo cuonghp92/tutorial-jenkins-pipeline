@@ -4,7 +4,7 @@ pipeline {
     FRONTEND_GIT = 'https://github.com/cuonghp92/tutorial-jenkins-frontend.git'
     FRONTEND_BRANCH = 'master'
     FRONTEND_IMAGE = 'cuongnm6/tutorial-jenkins-frontend'
-    FRONTEND_SERVER = '18.206.207.203'
+    FRONTEND_SERVER = '107.23.158.185'
     FRONTEND_SERVER_DIR = './app'
   }
   stages {
@@ -45,7 +45,7 @@ pipeline {
             def remote = [:]
             remote.name = 'server'
             remote.host = FRONTEND_SERVER
-            remote.user = user
+            remote.user = ec2-user
             remote.identityFile = identityFile
             remote.allowAnyHosts = true
 
